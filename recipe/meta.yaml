@@ -1,5 +1,5 @@
 {% set name = "flytekitplugins-modin" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekitplugins-modin-{{ version }}.tar.gz
-  sha256: dcfbaef87448720c75d54e057843490f431050d067f0ae92f90446bad05cde00
+  sha256: 7bc20552e9f3ba2728f2533d7e7fe1d84caab8d767eee6b052f575ddd1bd32aa
 
 build:
   number: 0
@@ -44,7 +44,7 @@ about:
   home: https://pypi.org/project/flytekitplugins-modin/
   summary: Modin plugin for flytekit
   license: Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
   description: |
