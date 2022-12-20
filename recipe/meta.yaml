@@ -1,5 +1,5 @@
 {% set name = "flytekitplugins-modin" %}
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekitplugins-modin-{{ version }}.tar.gz
-  sha256: b7f14b9a9467ed6421d0a3b1386305dc3933f4057a4055cdc34650ab486db770
+  sha256: f8c24a557b21e859870d375afd990a315740f98e4470c5cc951f98bba51ea914
 
 build:
   number: 0
