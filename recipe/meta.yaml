@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flytekitplugins-modin-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/flytekitplugins-modin-{{ version }}.tar.gz
   sha256: b7f14b9a9467ed6421d0a3b1386305dc3933f4057a4055cdc34650ab486db770
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - flytekit >=1.0.0b3,<1.2.0
     - fsspec
     # Change version after it is available on conda-forge
@@ -39,6 +39,7 @@ test:
   #   - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/flytekitplugins-modin/
